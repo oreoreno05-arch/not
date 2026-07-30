@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>納品書メーカー｜無料・登録不要でPDF作成 | インボイス請求書メーカー</title>
+<meta name="description" content="インボイス制度に対応した無料の納品書作成ツール。登録番号や税率ごとの消費税額を記載でき、A4のPDFとして保存できます。会員登録は不要です。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://oreoreno05-arch.github.io/not/delivery-note/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="納品書メーカー｜無料・登録不要でPDF作成 | インボイス請求書メーカー">
+<meta property="og:description" content="インボイス制度に対応した無料の納品書作成ツール。登録番号や税率ごとの消費税額を記載でき、A4のPDFとして保存できます。会員登録は不要です。">
+<meta property="og:url" content="https://oreoreno05-arch.github.io/not/delivery-note/">
+<meta property="og:site_name" content="インボイス請求書メーカー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://oreoreno05-arch.github.io/not/assets/img/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="/not/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/not/assets/img/icon-180.png">
+<link rel="manifest" href="/not/assets/manifest.webmanifest">
+<link rel="stylesheet" href="/not/assets/css/style.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"インボイス請求書メーカー","url":"https://oreoreno05-arch.github.io/not/","inLanguage":"ja","description":"適格請求書（インボイス）の6要件・税率ごとの端数処理・源泉徴収に対応した無料の請求書作成ツール。会員登録不要、データは端末内だけで処理、PDF保存まで完全無料です。"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://oreoreno05-arch.github.io/not/"},{"@type":"ListItem","position":2,"name":"納品書メーカー","item":"https://oreoreno05-arch.github.io/not/delivery-note/"}]}]</script>
+<!-- AdSense: site/data/site.json の monetization.adsense.enabled を true にすると有効化されます -->
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="/not/">
+      <svg class="brand__mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 2h9l5 5v15a0 0 0 0 1 0 0H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5.5 2.9h8.2l4.8 4.8v13.4H5.5z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8.4 11.4h7.2M8.4 14.6h7.2M8.4 17.6h4.4"/></svg>
+      <span class="brand__text">請求書メーカー</span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション"><a class="nav__link" href="/not/">請求書を作る</a><a class="nav__link" href="/not/estimate/">見積書</a><a class="nav__link" href="/not/tax-calculator/">消費税計算</a><a class="nav__link" href="/not/guide/">インボイス解説</a></nav>
+  </div>
+</header>
+<div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/not/">ホーム</a><span class="crumb__sep" aria-hidden="true">/</span><span aria-current="page">納品書メーカー</span></nav></div>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <h1>納品書を無料で作成・PDF保存</h1>
+    <p class="hero__lead">
+      納品内容と金額を明記した納品書を、登録不要で作成できます。登録番号や税率ごとの消費税額を記載すれば、
+      請求書と組み合わせて適格請求書の記載事項を満たすこともできます。
+    </p>
+    <div class="hero__badges">
+      <span class="badge badge--accent">完全無料・登録不要</span>
+      <span class="badge">登録番号の記載に対応</span>
+      <span class="badge">軽減税率8%に対応</span>
+    </div>
+  </div>
+</section>
+
+<section class="editor">
+  <div class="wrap">
+    <div class="notice" role="note">
+  <span class="notice__icon" aria-hidden="true">📌</span>
+  <div>
+    <b>2026年10月1日から、免税事業者からの仕入れの控除割合が 80% → 70% に変わります</b>
+    <p>あわせて「2割特例」も2026年9月30日で終了予定です（個人事業者は3割特例へ移行）。<a href="/not/guide/2026-10-change/">2026年10月の変更点をまとめて読む →</a></p>
+  </div>
+</div>
+    
+    <div class="editor__grid">
+      <!-- ============================ 入力 ============================ -->
+      <div class="editor__form">
+        <div class="panel">
+          <h2 class="panel__title"><span class="panel__step">1</span>あなた（発行者）の情報</h2>
+          <div class="field">
+            <label for="issuerName">氏名・屋号・会社名</label>
+            <input type="text" id="issuerName" data-model="issuerName" placeholder="山田デザイン事務所　山田太郎" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="issuerRegNo">適格請求書発行事業者の登録番号</label>
+            <input type="text" id="issuerRegNo" data-model="issuerRegNo" placeholder="T1234567890123" spellcheck="false">
+            <span class="field__hint">「T」＋13桁。形式を自動チェックします。<a href="https://www.invoice-kohyo.nta.go.jp/" target="_blank" rel="noopener">国税庁の公表サイトで確認</a></span>
+          </div>
+          <div class="field">
+            <label for="issuerAddress">住所</label>
+            <textarea id="issuerAddress" data-model="issuerAddress" rows="2" placeholder="東京都渋谷区渋谷2-2-2"></textarea>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label for="issuerTel">電話番号</label>
+              <input type="tel" id="issuerTel" data-model="issuerTel" placeholder="03-1234-5678">
+            </div>
+            <div class="field">
+              <label for="issuerEmail">メールアドレス</label>
+              <input type="email" id="issuerEmail" data-model="issuerEmail" placeholder="info@example.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="seal">電子印鑑（最大4文字）</label>
+            <input type="text" id="seal" data-model="seal" maxlength="4" placeholder="山田">
+            <span class="field__hint">入力すると赤い丸印がプレビューに表示されます（空欄なら非表示）</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2 class="panel__title"><span class="panel__step">2</span>宛先と納品書の基本情報</h2>
+          <div class="grid2">
+            <div class="field">
+              <label for="clientName">請求先の名称</label>
+              <input type="text" id="clientName" data-model="clientName" placeholder="株式会社サンプル商事">
+            </div>
+            <div class="field">
+              <label for="clientHonorific">敬称</label>
+              <select id="clientHonorific" data-model="clientHonorific">
+                <option value="御中">御中</option>
+                <option value="様">様</option>
+                <option value="">（なし）</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="clientAddress">請求先の住所（任意）</label>
+            <textarea id="clientAddress" data-model="clientAddress" rows="2" placeholder="東京都千代田区丸の内1-1-1"></textarea>
+          </div>
+          <div class="grid3">
+            <div class="field">
+              <label for="docNumber">納品書番号</label>
+              <input type="text" id="docNumber" data-model="docNumber">
+            </div>
+            <div class="field">
+              <label for="issueDate">納品日</label>
+              <input type="date" id="issueDate" data-model="issueDate">
+            </div>
+            
+          </div>
+          <div class="field">
+            <label for="title">タイトル</label>
+            <input type="text" id="title" data-model="title" placeholder="納品書">
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2 class="panel__title"><span class="panel__step">3</span>明細</h2>
+          <div class="field">
+            <span class="field__label">単価の入力方法</span>
+            <div class="grid2">
+              <select data-model="priceMode" aria-label="単価の税抜・税込">
+                <option value="exclusive">単価は税抜で入力</option>
+                <option value="inclusive">単価は税込で入力</option>
+              </select>
+              <select data-model="rounding" aria-label="消費税の端数処理">
+                <option value="floor">端数は切り捨て</option>
+                <option value="ceil">端数は切り上げ</option>
+                <option value="round">端数は四捨五入</option>
+              </select>
+            </div>
+            <span class="field__hint">端数処理は「1つの適格請求書につき税率ごとに1回」のルールで自動計算します。</span>
+          </div>
+
+          <table class="items">
+            <colgroup>
+              <col class="c-handle"><col><col class="c-qty"><col class="c-unit">
+              <col class="c-price"><col class="c-rate"><col class="c-amount"><col class="c-del">
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th><th>品目・内容</th><th>数量</th><th>単位</th><th>単価</th><th>税率</th><th>金額</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="itemsBody"></tbody>
+          </table>
+
+          <div class="btnrow">
+            <button type="button" class="btn btn--ghost" id="addRow">＋ 明細を追加</button>
+            <button type="button" class="btn" id="sampleBtn">見本データを入れる</button>
+          </div>
+
+          <div class="sum" id="summary"></div>
+        </div>
+
+        <div class="panel">
+          <h2 class="panel__title"><span class="panel__step">4</span>源泉徴収・備考</h2>
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" data-model="withholding">
+              <span>源泉徴収税額を差し引く（デザイン料・原稿料・講演料など）</span>
+            </label>
+          </div>
+          <div class="field" id="withholdingOptions" hidden>
+            <label for="whBase">源泉徴収の計算対象</label>
+            <select id="whBase" data-model="withholdingOnNet">
+              <option value="true">税抜金額を対象にする（消費税を区分している場合）</option>
+              <option value="false">税込金額を対象にする</option>
+            </select>
+            <span class="field__hint">100万円までは10.21%、超える部分は20.42%で自動計算します。</span>
+          </div>
+          <div class="field">
+            <label for="note">備考</label>
+            <textarea id="note" data-model="note" rows="2" placeholder="お振込手数料は貴社にてご負担をお願いいたします。"></textarea>
+          </div>
+          
+        </div>
+
+        <div class="panel" id="checklistPanel">
+          <div class="check" id="checklist"></div>
+        </div>
+
+        
+      </div>
+
+      <!-- ============================ プレビュー ============================ -->
+      <div class="preview-col">
+        <div class="preview-head">
+          <h2>プレビュー（A4）</h2>
+          <div class="btnrow" style="margin:0">
+            <button type="button" class="btn btn--primary" id="printBtn">🖨 PDF保存・印刷</button>
+            <button type="button" class="btn" id="saveJson" title="入力内容をファイルに保存">保存</button>
+            <label class="btn btn--file">読込<input type="file" id="loadJson" accept="application/json"></label>
+            <button type="button" class="btn" id="resetBtn">クリア</button>
+          </div>
+        </div>
+        <div class="preview-scroll">
+          <div id="preview"></div>
+        </div>
+        <p class="field__hint no-print" style="margin-top:.6rem">
+          「PDF保存・印刷」を押して、印刷先に <b>「PDFに保存」</b> を選ぶとPDFになります。入力内容はブラウザ内に保存され、サーバーには送信されません。
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <strong>インボイス請求書メーカー</strong>
+      <p class="footer__note">インボイス制度対応の請求書・見積書を、登録なし・無料で。</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="/not/">請求書作成</a>
+      <a href="/not/estimate/">見積書作成</a>
+      <a href="/not/delivery-note/">納品書作成</a>
+      <a href="/not/receipt/">領収書作成</a>
+      <a href="/not/tax-calculator/">消費税・源泉税計算</a>
+      <a href="/not/guide/">インボイス解説</a>
+      <a href="/not/privacy/">プライバシーポリシー</a>
+      <a href="/not/terms/">利用規約</a>
+      <a href="/not/about/">このサイトについて</a>
+    </nav>
+    <p class="footer__legal">
+      本サイトは一般的な情報提供を目的としたものであり、税務相談ではありません。個別の判断は税理士等の専門家、または国税庁の公式情報をご確認ください。<br>
+      &copy; 2026 インボイス請求書メーカー
+    </p>
+  </div>
+</footer>
+<script>window.DOC_TYPE={"key":"delivery","title":"納品書","numberLabel":"納品書番号","numberPrefix":"DN","dateLabel":"納品日","showDueDate":false,"showBank":false,"showTotalBox":true,"totalBoxLabel":"納品金額"};</script>
+<script src="/not/assets/js/invoice-core.js"></script>
+<script src="/not/assets/js/editor.js"></script>
+</body>
+</html>

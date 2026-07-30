@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDFの請求書はどう保存する？電子帳簿保存法の実務対応 | インボイス請求書メーカー</title>
+<meta name="description" content="メールで受け取ったPDFの請求書は電子データのまま保存が必要です。真実性・可視性の2要件を、専用システムなしでファイル名と事務処理規程で満たす方法を解説します。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://oreoreno05-arch.github.io/not/guide/denshi-chobo/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PDFの請求書はどう保存する？電子帳簿保存法の実務対応 | インボイス請求書メーカー">
+<meta property="og:description" content="メールで受け取ったPDFの請求書は電子データのまま保存が必要です。真実性・可視性の2要件を、専用システムなしでファイル名と事務処理規程で満たす方法を解説します。">
+<meta property="og:url" content="https://oreoreno05-arch.github.io/not/guide/denshi-chobo/">
+<meta property="og:site_name" content="インボイス請求書メーカー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://oreoreno05-arch.github.io/not/assets/img/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="/not/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/not/assets/img/icon-180.png">
+<link rel="manifest" href="/not/assets/manifest.webmanifest">
+<link rel="stylesheet" href="/not/assets/css/style.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"インボイス請求書メーカー","url":"https://oreoreno05-arch.github.io/not/","inLanguage":"ja","description":"適格請求書（インボイス）の6要件・税率ごとの端数処理・源泉徴収に対応した無料の請求書作成ツール。会員登録不要、データは端末内だけで処理、PDF保存まで完全無料です。"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://oreoreno05-arch.github.io/not/"},{"@type":"ListItem","position":2,"name":"インボイス解説","item":"https://oreoreno05-arch.github.io/not/guide/"},{"@type":"ListItem","position":3,"name":"電子帳簿保存法","item":"https://oreoreno05-arch.github.io/not/guide/denshi-chobo/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"メールでPDFの請求書を受け取ったら、印刷して保存すればいいですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。電子取引で受け取ったデータは、電子データのまま保存する必要があります。紙に印刷したものだけを保存する方法は、原則として認められていません。"}},{"@type":"Question","name":"専用のシステムを買わないと対応できませんか？","acceptedAnswer":{"@type":"Answer","text":"必ずしも必要ありません。ファイル名に「日付_取引先_金額」を入れて規則的に保存し、事務処理規程を備え付ける方法でも要件を満たせます。"}},{"@type":"Question","name":"自分が発行した請求書の控えも保存が必要ですか？","acceptedAnswer":{"@type":"Answer","text":"必要です。適格請求書発行事業者は、交付した適格請求書の写しを保存する義務があります。PDFで発行した場合は、そのPDFを電子データとして保存します。"}}]},{"@context":"https://schema.org","@type":"Article","headline":"PDFの請求書はどう保存する？電子帳簿保存法の実務対応","datePublished":"2026-07-20","dateModified":"2026-07-31","author":{"@type":"Organization","name":"インボイス請求書メーカー"},"publisher":{"@type":"Organization","name":"インボイス請求書メーカー"},"mainEntityOfPage":"https://oreoreno05-arch.github.io/not/guide/denshi-chobo/","inLanguage":"ja"}]</script>
+<!-- AdSense: site/data/site.json の monetization.adsense.enabled を true にすると有効化されます -->
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="/not/">
+      <svg class="brand__mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 2h9l5 5v15a0 0 0 0 1 0 0H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5.5 2.9h8.2l4.8 4.8v13.4H5.5z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8.4 11.4h7.2M8.4 14.6h7.2M8.4 17.6h4.4"/></svg>
+      <span class="brand__text">請求書メーカー</span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション"><a class="nav__link" href="/not/">請求書を作る</a><a class="nav__link" href="/not/estimate/">見積書</a><a class="nav__link" href="/not/tax-calculator/">消費税計算</a><a class="nav__link" href="/not/guide/">インボイス解説</a></nav>
+  </div>
+</header>
+<div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/not/">ホーム</a><span class="crumb__sep" aria-hidden="true">/</span><a href="/not/guide/">インボイス解説</a><span class="crumb__sep" aria-hidden="true">/</span><span aria-current="page">電子帳簿保存法</span></nav></div>
+<main id="main">
+
+<section class="article">
+  <div class="wrap article__grid">
+    <article class="prose">
+      <h1>PDFの請求書はどう保存する？電子帳簿保存法の実務対応</h1>
+      <div class="article__meta"><span>公開日: 2026-07-20</span><span>更新日: 2026-07-31</span></div>
+      <p class="lead">
+        請求書をPDFでやり取りするようになった今、避けて通れないのが電子帳簿保存法への対応です。
+        「メールで受け取ったPDFを印刷して紙で保管」は原則として認められません。
+        ただし高価なシステムがなくても、ファイル名の付け方と規程の備え付けで対応できます。
+      </p>
+
+      <nav class="toc" aria-label="目次">
+  <p class="toc__title">この記事の内容</p>
+  <ol>
+    <li><a href="#what">電子取引のデータ保存とは</a></li>
+    <li><a href="#req">満たすべき2つの要件</a></li>
+    <li><a href="#filename">ファイル名で対応する方法</a></li>
+    <li><a href="#invoice">インボイスとの関係</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+  </ol>
+</nav>
+
+      <h2 id="what">電子取引のデータ保存とは</h2>
+      <p>
+        メール添付・Webからのダウンロード・クラウドサービス経由など、
+        <strong>電子的に授受した取引情報は、電子データのまま保存する</strong>ことが必要です。
+        紙でやり取りした請求書はこれまでどおり紙で保存できますが、PDFで受け取ったものを印刷して紙だけ残す運用はできません。
+      </p>
+
+      <h2 id="req">満たすべき2つの要件</h2>
+      <div class="tablewrap">
+        <table class="table">
+          <thead><tr><th>要件</th><th>内容</th><th>実務での対応例</th></tr></thead>
+          <tbody>
+            <tr>
+              <th>真実性の確保</th>
+              <td>データが改ざんされていないこと</td>
+              <td>訂正・削除の防止に関する事務処理規程を定めて運用する／タイムスタンプを付与する</td>
+            </tr>
+            <tr>
+              <th>可視性の確保</th>
+              <td>必要なときにすぐ検索・表示できること</td>
+              <td>取引年月日・取引先・金額で検索できるようにする</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+
+      <h2 id="filename">ファイル名で対応する方法</h2>
+      <p>
+        専用システムを導入しなくても、ファイル名を規則的に付けることで検索要件を満たせます。
+      </p>
+      <div class="callout">
+        <span class="callout__title">ファイル名の付け方の例</span>
+        <p>
+          <code>20260731_株式会社サンプル商事_330000.pdf</code><br>
+          （取引年月日＿取引先名＿税込金額）
+        </p>
+      </div>
+      <p>
+        あわせて、年度ごと・月ごとのフォルダに整理し、「訂正削除の防止に関する事務処理規程」を作成して備え付けます。
+        規程のひな形は国税庁のサイトで公開されています。
+      </p>
+      <ul>
+        <li>フォルダ構成の例: <code>2026年度 / 07月 / 受領した請求書</code></li>
+        <li>発行した請求書の控えも同じルールで保存する</li>
+        <li>バックアップを別の場所にも取っておく</li>
+      </ul>
+
+      <h2 id="invoice">インボイスとの関係</h2>
+      <p>
+        PDFで交付した適格請求書は「電子インボイス」にあたります。
+        インボイス制度上の保存義務と、電子帳簿保存法上の保存要件の<strong>両方</strong>を満たす必要があります。
+      </p>
+      <div class="tablewrap">
+        <table class="table">
+          <thead><tr><th>制度</th><th>何を保存するか</th><th>期間</th></tr></thead>
+          <tbody>
+            <tr><th>インボイス制度</th><td>交付した適格請求書の写し／受領した適格請求書</td><td>原則7年間</td></tr>
+            <tr><th>電子帳簿保存法</th><td>電子取引で授受したデータ（電子のまま）</td><td>同上</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--ok">
+        <span class="callout__title">当サイトで作成した請求書の場合</span>
+        <p><a href="/not/">請求書メーカー</a>で作成したPDFをメールで送付した場合、そのPDFが電子インボイスになります。送付したPDFを上記のルールで保存すれば、写しの保存義務も同時に果たせます。</p>
+      </div>
+
+      <h2 id="faq">よくある質問</h2>
+      <div class="faq">
+  <details class="faq__item">
+    <summary class="faq__q">メールでPDFの請求書を受け取ったら、印刷して保存すればいいですか？</summary>
+    <div class="faq__a"><p>いいえ。電子取引で受け取ったデータは、電子データのまま保存する必要があります。紙に印刷したものだけを保存する方法は、原則として認められていません。</p></div>
+  </details>
+  <details class="faq__item">
+    <summary class="faq__q">専用のシステムを買わないと対応できませんか？</summary>
+    <div class="faq__a"><p>必ずしも必要ありません。ファイル名に「日付_取引先_金額」を入れて規則的に保存し、事務処理規程を備え付ける方法でも要件を満たせます。</p></div>
+  </details>
+  <details class="faq__item">
+    <summary class="faq__q">自分が発行した請求書の控えも保存が必要ですか？</summary>
+    <div class="faq__a"><p>必要です。適格請求書発行事業者は、交付した適格請求書の写しを保存する義務があります。PDFで発行した場合は、そのPDFを電子データとして保存します。</p></div>
+  </details>
+</div>
+
+      <div class="callout">
+        <span class="callout__title">この記事について</span>
+        <p>本記事は一般的な情報提供を目的とした解説です。個別の判断は、国税庁の公式情報または税理士等の専門家にご確認ください。</p>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem">
+        <a class="btn btn--primary btn--lg" href="/not/">PDFで保存できる請求書を作る →</a>
+      </p>
+      
+    </article>
+    <aside class="side">
+  <div class="side__card side__cta">
+    <h2 class="side__title">無料ツール</h2>
+    <p>インボイス対応の請求書を、登録なしで今すぐ作成できます。</p>
+    <a class="btn btn--primary" href="/not/">請求書を作成する</a>
+  </div>
+  
+  <div class="side__card">
+    <h2 class="side__title">よく読まれている解説</h2>
+    <ul class="side__list">
+      
+    </ul>
+  </div>
+  <div class="side__card">
+    <h2 class="side__title">ほかのツール</h2>
+    <ul class="side__list">
+      <li><a href="/not/estimate/">見積書メーカー</a></li>
+      <li><a href="/not/delivery-note/">納品書メーカー</a></li>
+      <li><a href="/not/receipt/">領収書メーカー</a></li>
+      <li><a href="/not/tax-calculator/">消費税・源泉徴収税 計算機</a></li>
+    </ul>
+  </div>
+  
+</aside>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <strong>インボイス請求書メーカー</strong>
+      <p class="footer__note">インボイス制度対応の請求書・見積書を、登録なし・無料で。</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="/not/">請求書作成</a>
+      <a href="/not/estimate/">見積書作成</a>
+      <a href="/not/delivery-note/">納品書作成</a>
+      <a href="/not/receipt/">領収書作成</a>
+      <a href="/not/tax-calculator/">消費税・源泉税計算</a>
+      <a href="/not/guide/">インボイス解説</a>
+      <a href="/not/privacy/">プライバシーポリシー</a>
+      <a href="/not/terms/">利用規約</a>
+      <a href="/not/about/">このサイトについて</a>
+    </nav>
+    <p class="footer__legal">
+      本サイトは一般的な情報提供を目的としたものであり、税務相談ではありません。個別の判断は税理士等の専門家、または国税庁の公式情報をご確認ください。<br>
+      &copy; 2026 インボイス請求書メーカー
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

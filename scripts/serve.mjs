@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const DIST = path.join(ROOT, 'dist');
+const DIST = path.join(ROOT, process.env.OUT_DIR || 'docs');
 const site = JSON.parse(await readFile(path.join(ROOT, 'site/data/site.json'), 'utf8'));
 const BASE = site.basePath || '';
 const PORT = process.env.PORT || 4173;

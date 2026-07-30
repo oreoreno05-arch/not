@@ -34,7 +34,7 @@
 ## 使い方
 
 ```bash
-npm run build     # dist/ に静的サイトを生成
+npm run build     # docs/ に静的サイトを生成
 npm run dev       # ビルドしてローカルサーバーを起動（http://localhost:4173/not/）
 npm test          # 計算ロジックのテスト（36件）
 npm run verify    # テスト + 生成物の検証 + ブラウザ相当のE2E（全70件）
@@ -122,8 +122,18 @@ export default function (site) {
 
 ## デプロイ
 
-`main` への push で GitHub Actions が自動デプロイします。
-初回のみ、リポジトリの **Settings → Pages → Source** を **GitHub Actions** に設定してください。
+ビルド結果を `docs/` にコミットし、GitHub Pages の
+**Settings → Pages → Source: Deploy from a branch → Branch: main / docs** で公開します。
+Actions の権限設定が不要で、push するだけで反映されます。
+
+```bash
+npm run build     # docs/ を更新
+git add docs && git commit -m "サイトを更新" && git push
+```
+
+GitHub Actions で自動化したい場合は、`deploy/github-actions-deploy.yml` を
+`.github/workflows/` に移動してください（リポジトリに workflow 権限が必要です）。
+その際は Settings → Pages → Source を **GitHub Actions** に切り替えます。
 
 ---
 

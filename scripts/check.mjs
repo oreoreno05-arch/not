@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const DIST = path.join(ROOT, 'dist');
+const DIST = path.join(ROOT, process.env.OUT_DIR || 'docs');
 const site = JSON.parse(await readFile(path.join(ROOT, 'site/data/site.json'), 'utf8'));
 const BASE = site.basePath || '';
 
@@ -26,7 +26,7 @@ async function walk(dir) {
 }
 
 if (!existsSync(DIST)) {
-  console.error('dist/ がありません。先に `npm run build` を実行してください。');
+  console.error('出力ディレクトリがありません。先に `npm run build` を実行してください。');
   process.exit(1);
 }
 
@@ -132,7 +132,7 @@ for (const f of files) total += (await stat(f)).size;
 
 console.log(`\n検査したHTML: ${checked} ページ`);
 console.log(`sitemap の URL: ${locCount} 件`);
-console.log(`dist の合計サイズ: ${(total / 1024).toFixed(1)} KB`);
+console.log(`出力の合計サイズ: ${(total / 1024).toFixed(1)} KB`);
 
 if (warnings.length) {
   console.log(`\n⚠ 警告 ${warnings.length} 件`);

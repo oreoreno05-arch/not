@@ -11,7 +11,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SITE = path.join(ROOT, 'site');
-const DIST = path.join(ROOT, 'dist');
+// GitHub Pages を「ブランチ + /docs」で公開するため docs/ に出力する。
+// OUT_DIR 環境変数で変更可能（例: OUT_DIR=dist）。
+const DIST = path.join(ROOT, process.env.OUT_DIR || 'docs');
 
 const site = JSON.parse(await readFile(path.join(SITE, 'data', 'site.json'), 'utf8'));
 site.baseUrl = site.origin.replace(/\/$/, '') + (site.basePath || '');
@@ -120,7 +122,7 @@ async function main() {
   let bytes = 0;
   for (const f of await walk(DIST)) bytes += (await stat(f)).size;
   console.log(`✓ ${pages.length} ページ / ${guides.length} 記事を生成`);
-  console.log(`✓ 出力: dist/ (${(bytes / 1024).toFixed(1)} KB)`);
+  console.log(`✓ 出力: ${path.relative(ROOT, DIST)}/ (${(bytes / 1024).toFixed(1)} KB)`);
   console.log(`✓ ベースURL: ${site.baseUrl}`);
   if (!site.monetization?.adsense?.enabled) {
     console.log('ℹ 広告は未有効（site/data/site.json の monetization.adsense を設定すると配信されます）');
