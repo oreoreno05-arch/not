@@ -113,6 +113,7 @@ export function render({ site, page }) {
   return `<!doctype html>
 <html lang="ja">
 <head>
+<meta name="google-site-verification" content="1pu4mEhubu3DAwIO3UlDS6hXUp0MvVRNGr8GxdhcD18" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
