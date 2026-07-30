@@ -1,0 +1,217 @@
+import { articleSide, adSlot, faqBlock, toc } from '../../layouts/parts.mjs';
+
+export default function (site) {
+  const base = site.basePath || '';
+
+  const faq = faqBlock([
+    {
+      q: '手書きの請求書でもインボイスになりますか？',
+      a: '<p>なります。適格請求書に決まった様式はありません。6つの記載事項がすべて記載されていれば、手書きでもExcelでも、レシートや納品書でも適格請求書として扱われます。</p>',
+    },
+    {
+      q: '請求書と納品書に分けて記載してもいいですか？',
+      a: '<p>問題ありません。複数の書類全体で6つの記載事項を満たしていれば、それらの書類を合わせて1つの適格請求書として扱えます。ただし、書類同士の関連性が明確である必要があります。</p>',
+    },
+    {
+      q: '「上様」宛ての領収書は使えますか？',
+      a: '<p>原則として使えません。適格請求書には交付を受ける事業者の氏名または名称が必要です。ただし小売業・飲食店業・タクシー業などが交付する「適格簡易請求書」では、宛名の記載を省略できます。</p>',
+    },
+    {
+      q: '記載漏れがある請求書を受け取ったらどうすればいいですか？',
+      a: '<p>発行者に修正した適格請求書の交付を求めてください。区分記載請求書等の時代と異なり、受け取った側が自分で追記して修正することは原則として認められていません。</p>',
+    },
+  ]);
+
+  const items = [
+    { id: 'six', label: '適格請求書の6つの記載事項' },
+    { id: 'detail', label: '項目ごとの書き方と注意点' },
+    { id: 'sample', label: '記載例（レイアウト見本）' },
+    { id: 'simple', label: '適格簡易請求書が使える業種' },
+    { id: 'mistake', label: 'よくある不備トップ5' },
+    { id: 'faq', label: 'よくある質問' },
+  ];
+
+  const body = `
+<section class="article">
+  <div class="wrap article__grid">
+    <article class="prose">
+      <h1>適格請求書（インボイス）の書き方｜6つの記載事項を記載例つきで解説</h1>
+      <div class="article__meta"><span>公開日: 2026-07-28</span><span>更新日: 2026-07-31</span></div>
+      <p class="lead">
+        適格請求書には、決まった様式はありません。必要なのは<strong>6つの記載事項</strong>がもれなく書かれていることだけです。
+        逆に言えば、1つでも欠けると取引先が仕入税額控除を受けられなくなり、修正依頼という手間が発生します。
+        この記事では、6つの項目を一つずつ、実際の書き方と間違えやすいポイントとともに解説します。
+      </p>
+
+      ${toc(items)}
+
+      <h2 id="six">適格請求書の6つの記載事項</h2>
+      <div class="tablewrap">
+        <table class="table">
+          <thead><tr><th>#</th><th>記載事項</th><th>インボイス制度で追加された項目</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>適格請求書発行事業者の氏名または名称および<strong>登録番号</strong></td><td>登録番号が追加</td></tr>
+            <tr><td>2</td><td>取引年月日</td><td>—</td></tr>
+            <tr><td>3</td><td>取引内容（軽減税率の対象品目である旨）</td><td>—</td></tr>
+            <tr><td>4</td><td>税率ごとに区分して合計した対価の額および<strong>適用税率</strong></td><td>適用税率が追加</td></tr>
+            <tr><td>5</td><td><strong>税率ごとに区分した消費税額等</strong></td><td>追加</td></tr>
+            <tr><td>6</td><td>書類の交付を受ける事業者の氏名または名称</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--ok">
+        <span class="callout__title">6項目は自動でチェックできます</span>
+        <p><a href="${base}/">当サイトの請求書メーカー</a>では、入力しながら6つの記載事項の充足状況がリアルタイムで表示されます。抜け漏れのまま送ってしまう事故を防げます。</p>
+      </div>
+
+      ${adSlot(site, 'inArticle')}
+
+      <h2 id="detail">項目ごとの書き方と注意点</h2>
+
+      <h3>1. 氏名または名称と登録番号</h3>
+      <p>
+        登録番号は<strong>「T」＋13桁の数字</strong>です。法人の場合は「T＋法人番号」がそのまま使われ、
+        個人事業主の場合は法人番号とは別に新しい番号が付番されます。屋号だけを記載する場合でも、
+        登録を受けた氏名または名称が特定できる必要があります。
+      </p>
+      <div class="callout callout--warn">
+        <span class="callout__title">登録番号は必ず自分のものを確認</span>
+        <p>桁の打ち間違いは頻出の不備です。<a href="https://www.invoice-kohyo.nta.go.jp/" target="_blank" rel="noopener">国税庁 適格請求書発行事業者公表サイト</a>で自分の番号を確認し、テンプレートに保存しておきましょう。</p>
+      </div>
+
+      <h3>2. 取引年月日</h3>
+      <p>
+        請求書を作成した日ではなく、<strong>実際に商品を引き渡した日やサービスを提供した日</strong>を書きます。
+        1か月分をまとめて請求する場合は、「2026年7月1日〜7月31日」のように課税期間をまとめて記載することも認められています。
+      </p>
+
+      <h3>3. 取引内容（軽減税率の対象品目である旨）</h3>
+      <p>
+        品目やサービス名を具体的に書きます。「品代」「お品代」だけでは内容が特定できず不十分とされる可能性があります。
+        軽減税率（8%）の対象が含まれる場合は、その品目に「※」などの記号を付け、
+        欄外に「※は軽減税率対象」と注記する方法が一般的です。
+      </p>
+
+      <h3>4. 税率ごとに区分した対価の額と適用税率</h3>
+      <p>
+        10%対象・8%対象それぞれの合計額を分けて記載します。税抜・税込どちらの表示でも構いませんが、
+        <strong>合計額だけの記載では要件を満たしません</strong>。
+      </p>
+
+      <h3>5. 税率ごとに区分した消費税額等</h3>
+      <p>
+        税率ごとの消費税額を記載します。ここで最も重要なのが<strong>端数処理のルール</strong>です。
+        1円未満の端数処理は、1つの適格請求書につき<strong>税率ごとに1回</strong>しか行えません。
+        明細ごとに端数処理をして合計する方法は認められていません。
+      </p>
+      <p>詳しくは <a href="${base}/guide/rounding/">消費税の端数処理のルール</a> で解説しています。</p>
+
+      <h3>6. 交付を受ける事業者の氏名または名称</h3>
+      <p>
+        取引先の正式名称を書きます。「(株)」などの略称は避け、登記上の名称を使うのが無難です。
+        「上様」や宛名なしは原則として要件を満たしません。
+      </p>
+
+      <h2 id="sample">記載例（レイアウト見本）</h2>
+      <p>6つの記載事項を満たした請求書は、たとえば次のような構成になります。</p>
+      <div class="tablewrap">
+        <table class="table">
+          <tbody>
+            <tr><th>ヘッダー</th><td>「請求書」というタイトル／請求書番号／<strong>①発行者名と登録番号 T1234567890123</strong></td></tr>
+            <tr><th>宛先</th><td><strong>⑥株式会社サンプル商事 御中</strong></td></tr>
+            <tr><th>日付</th><td><strong>②2026年7月31日</strong>（または取引期間）</td></tr>
+            <tr><th>明細</th><td><strong>③Webサイト制作 / ※弁当代</strong>（※は軽減税率対象）</td></tr>
+            <tr><th>集計</th><td><strong>④10%対象 250,000円 / 8%対象 3,920円</strong><br><strong>⑤消費税 25,000円 / 313円</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        <a href="${base}/">請求書メーカー</a>の「見本データを入れる」ボタンを押すと、
+        この構成のサンプルがそのままプレビューに表示されます。
+      </p>
+
+      ${adSlot(site, 'inArticle')}
+
+      <h2 id="simple">適格簡易請求書が使える業種</h2>
+      <p>
+        不特定多数の相手に販売する次の事業では、記載事項を簡略化した<strong>適格簡易請求書</strong>を交付できます。
+      </p>
+      <ul>
+        <li>小売業</li>
+        <li>飲食店業</li>
+        <li>写真業</li>
+        <li>旅行業</li>
+        <li>タクシー業</li>
+        <li>駐車場業（不特定多数向け）</li>
+        <li>その他これらに準ずる事業</li>
+      </ul>
+      <p>
+        適格簡易請求書では<strong>宛名の記載を省略でき</strong>、「適用税率」または「税率ごとに区分した消費税額等」のどちらか一方の記載で足ります。
+        レシートを交付する業種はこちらを使うと実務が楽になります。
+        <a href="${base}/receipt/">領収書メーカー</a>でも作成できます。
+      </p>
+
+      <h2 id="mistake">よくある不備トップ5</h2>
+      <div class="tablewrap">
+        <table class="table">
+          <thead><tr><th>不備の内容</th><th>どうすべきか</th></tr></thead>
+          <tbody>
+            <tr><th>登録番号がない・桁が違う</th><td>公表サイトで確認し、テンプレートに固定しておく</td></tr>
+            <tr><th>「品代」など内容が不明確</th><td>具体的な品目名・サービス名を書く</td></tr>
+            <tr><th>適用税率の記載がない</th><td>10%・8%を明示し、税率ごとに合計する</td></tr>
+            <tr><th>明細ごとに端数処理している</th><td>税率ごとに1回だけ端数処理する</td></tr>
+            <tr><th>宛名が「上様」</th><td>正式名称を記載（簡易請求書の業種を除く）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="faq">よくある質問</h2>
+      ${faq.html}
+
+      <div class="callout">
+        <span class="callout__title">この記事について</span>
+        <p>本記事は一般的な情報提供を目的とした解説です。個別の判断は、国税庁の公式情報または税理士等の専門家にご確認ください。</p>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem">
+        <a class="btn btn--primary btn--lg" href="${base}/">6項目チェック付きで請求書を作る →</a>
+      </p>
+      ${adSlot(site, 'footer')}
+    </article>
+    ${articleSide(site, '/guide/invoice-requirements/')}
+  </div>
+</section>`;
+
+  return {
+    path: '/guide/invoice-requirements/',
+    collection: 'guide',
+    tag: '基本',
+    date: '2026-07-28',
+    updated: '2026-07-31',
+    linkTitle: '適格請求書の書き方｜6つの記載事項',
+    summary: 'インボイスに必要な6項目を、記載例と間違えやすいポイントとともに解説します。',
+    title: '適格請求書（インボイス）の書き方｜6つの記載事項を記載例つきで解説',
+    description:
+      '適格請求書に必要な6つの記載事項を、書き方の具体例とよくある不備とあわせて解説。登録番号の形式、軽減税率の表示方法、適格簡易請求書が使える業種までまとめました。',
+    breadcrumb: [
+      { name: 'ホーム', path: '/' },
+      { name: 'インボイス解説', path: '/guide/' },
+      { name: '適格請求書の書き方', path: '/guide/invoice-requirements/' },
+    ],
+    jsonLd: [
+      faq.jsonLd,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: '適格請求書（インボイス）の書き方｜6つの記載事項を記載例つきで解説',
+        datePublished: '2026-07-28',
+        dateModified: '2026-07-31',
+        author: { '@type': 'Organization', name: site.name },
+        publisher: { '@type': 'Organization', name: site.name },
+        mainEntityOfPage: site.baseUrl + '/guide/invoice-requirements/',
+        inLanguage: 'ja',
+      },
+    ],
+    body,
+  };
+}

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>消費税・源泉徴収税 計算機｜税抜税込の変換と経過措置 | インボイス請求書メーカー</title>
+<meta name="description" content="税抜⇄税込の変換、消費税の端数処理、報酬の源泉徴収税額（10.21%・20.42%）、免税事業者からの仕入れの経過措置による控除額を、その場で無料計算できます。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://oreoreno05-arch.github.io/not/tax-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="消費税・源泉徴収税 計算機｜税抜税込の変換と経過措置 | インボイス請求書メーカー">
+<meta property="og:description" content="税抜⇄税込の変換、消費税の端数処理、報酬の源泉徴収税額（10.21%・20.42%）、免税事業者からの仕入れの経過措置による控除額を、その場で無料計算できます。">
+<meta property="og:url" content="https://oreoreno05-arch.github.io/not/tax-calculator/">
+<meta property="og:site_name" content="インボイス請求書メーカー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://oreoreno05-arch.github.io/not/assets/img/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="/not/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/not/assets/img/icon-180.png">
+<link rel="manifest" href="/not/assets/manifest.webmanifest">
+<link rel="stylesheet" href="/not/assets/css/style.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"インボイス請求書メーカー","url":"https://oreoreno05-arch.github.io/not/","inLanguage":"ja","description":"適格請求書（インボイス）の6要件・税率ごとの端数処理・源泉徴収に対応した無料の請求書作成ツール。会員登録不要、データは端末内だけで処理、PDF保存まで完全無料です。"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://oreoreno05-arch.github.io/not/"},{"@type":"ListItem","position":2,"name":"消費税・源泉徴収税 計算機","item":"https://oreoreno05-arch.github.io/not/tax-calculator/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"税込金額から消費税額を求める計算式は？","acceptedAnswer":{"@type":"Answer","text":"10%対象なら「税込金額 × 10 ÷ 110」、8%対象なら「税込金額 × 8 ÷ 108」で消費税額を求めます。1円未満の端数は、1つの請求書につき税率ごとに1回だけ処理します。"}},{"@type":"Question","name":"源泉徴収税額はいくらになりますか？","acceptedAnswer":{"@type":"Answer","text":"報酬・料金等の源泉徴収税額は、支払金額100万円以下の部分が10.21%、100万円を超える部分が20.42%です。請求書で消費税額を明確に区分している場合は、税抜金額を対象として計算して差し支えありません。"}},{"@type":"Question","name":"消費税の端数は切り捨て・切り上げどちらですか？","acceptedAnswer":{"@type":"Answer","text":"どちらでも構いません。切り捨て・切り上げ・四捨五入のいずれを選ぶかは事業者が任意に決められますが、1つの適格請求書の中では方法を統一し、端数処理は税率ごとに1回だけ行う必要があります。"}}]}]</script>
+<!-- AdSense: site/data/site.json の monetization.adsense.enabled を true にすると有効化されます -->
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="/not/">
+      <svg class="brand__mark" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 2h9l5 5v15a0 0 0 0 1 0 0H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" opacity=".18"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5.5 2.9h8.2l4.8 4.8v13.4H5.5z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8.4 11.4h7.2M8.4 14.6h7.2M8.4 17.6h4.4"/></svg>
+      <span class="brand__text">請求書メーカー</span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション"><a class="nav__link" href="/not/">請求書を作る</a><a class="nav__link" href="/not/estimate/">見積書</a><a class="nav__link is-active" href="/not/tax-calculator/">消費税計算</a><a class="nav__link" href="/not/guide/">インボイス解説</a></nav>
+  </div>
+</header>
+<div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><a href="/not/">ホーム</a><span class="crumb__sep" aria-hidden="true">/</span><span aria-current="page">消費税・源泉徴収税 計算機</span></nav></div>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <h1>消費税・源泉徴収税 計算機</h1>
+    <p class="hero__lead">
+      税抜⇄税込の変換、源泉徴収税額、免税事業者からの仕入れの経過措置まで、その場で計算できます。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:60rem">
+    <div class="notice" role="note">
+  <span class="notice__icon" aria-hidden="true">📌</span>
+  <div>
+    <b>2026年10月1日から、免税事業者からの仕入れの控除割合が 80% → 70% に変わります</b>
+    <p>あわせて「2割特例」も2026年9月30日で終了予定です（個人事業者は3割特例へ移行）。<a href="/not/guide/2026-10-change/">2026年10月の変更点をまとめて読む →</a></p>
+  </div>
+</div>
+
+    <!-- ============ 消費税・源泉徴収 ============ -->
+    <div class="panel" id="taxCalc">
+      <h2 class="panel__title">消費税・源泉徴収税の計算</h2>
+      <div class="calc">
+        <div>
+          <div class="field">
+            <label for="calcAmount">金額</label>
+            <input type="text" id="calcAmount" inputmode="decimal" value="100000">
+          </div>
+          <div class="field">
+            <span class="field__label">入力した金額は</span>
+            <div class="seg" id="modeSeg">
+              <button type="button" class="seg__btn is-active" data-mode="exclusive">税抜</button>
+              <button type="button" class="seg__btn" data-mode="inclusive">税込</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="field__label">税率</span>
+            <div class="seg" id="rateSeg">
+              <button type="button" class="seg__btn is-active" data-rate="10">10%</button>
+              <button type="button" class="seg__btn" data-rate="8">8%（軽減）</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="calcRounding">端数処理</label>
+            <select id="calcRounding">
+              <option value="floor">切り捨て</option>
+              <option value="ceil">切り上げ</option>
+              <option value="round">四捨五入</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" id="calcWithholding">
+              <span>源泉徴収税額も計算する</span>
+            </label>
+          </div>
+        </div>
+        <div class="result" id="taxResult"></div>
+      </div>
+    </div>
+
+    
+
+    <!-- ============ 経過措置 ============ -->
+    <div class="panel" id="transCalc">
+      <h2 class="panel__title">免税事業者からの仕入れ｜控除できる金額</h2>
+      <p style="font-size:.9rem;color:var(--ink-soft);margin:0 0 1rem">
+        インボイスの登録をしていない事業者から仕入れた場合、経過措置によって一定割合まで仕入税額控除ができます。
+        取引日を入れると、その時点で適用される割合で計算します。
+      </p>
+      <div class="calc">
+        <div>
+          <div class="field">
+            <label for="transAmount">仕入金額（税込・10%対象）</label>
+            <input type="text" id="transAmount" inputmode="decimal" value="110000">
+          </div>
+          <div class="field">
+            <label for="transDate">課税仕入れを行った日</label>
+            <input type="date" id="transDate">
+          </div>
+        </div>
+        <div class="result" id="transResult"></div>
+      </div>
+    </div>
+
+    <!-- ============ 登録番号チェック ============ -->
+    <div class="panel">
+      <h2 class="panel__title">登録番号の形式チェック</h2>
+      <div class="field">
+        <label for="regCheck">適格請求書発行事業者の登録番号</label>
+        <input type="text" id="regCheck" placeholder="T1234567890123" spellcheck="false">
+      </div>
+      <div id="regResult"><p class="result__note">「T」から始まる13桁の登録番号を入力してください。</p></div>
+    </div>
+
+    <div class="prose" style="margin-top:1.6rem">
+      <h2>計算のルール</h2>
+      <div class="tablewrap">
+        <table class="table">
+          <thead><tr><th>項目</th><th>計算式</th></tr></thead>
+          <tbody>
+            <tr><th>税抜→消費税（10%）</th><td>税抜金額 × 10%</td></tr>
+            <tr><th>税込→消費税（10%）</th><td>税込金額 × 10 ÷ 110</td></tr>
+            <tr><th>税込→消費税（8%）</th><td>税込金額 × 8 ÷ 108</td></tr>
+            <tr><th>源泉徴収（100万円以下）</th><td>支払金額 × 10.21%</td></tr>
+            <tr><th>源泉徴収（100万円超の部分）</th><td>1,000,000 × 10.21% ＋（支払金額 − 1,000,000）× 20.42%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--warn">
+        <span class="callout__title">端数処理は「税率ごとに1回」</span>
+        <p>適格請求書では、消費税額の1円未満の端数処理を、1つの請求書につき税率ごとに1回だけ行います。明細ごとに端数処理をして合計する方法は認められていません。</p>
+      </div>
+      <h2>よくある質問</h2>
+      <div class="faq">
+  <details class="faq__item">
+    <summary class="faq__q">税込金額から消費税額を求める計算式は？</summary>
+    <div class="faq__a"><p>10%対象なら「税込金額 × 10 ÷ 110」、8%対象なら「税込金額 × 8 ÷ 108」で消費税額を求めます。1円未満の端数は、1つの請求書につき税率ごとに1回だけ処理します。</p></div>
+  </details>
+  <details class="faq__item">
+    <summary class="faq__q">源泉徴収税額はいくらになりますか？</summary>
+    <div class="faq__a"><p>報酬・料金等の源泉徴収税額は、支払金額100万円以下の部分が10.21%、100万円を超える部分が20.42%です。請求書で消費税額を明確に区分している場合は、税抜金額を対象として計算して差し支えありません。</p></div>
+  </details>
+  <details class="faq__item">
+    <summary class="faq__q">消費税の端数は切り捨て・切り上げどちらですか？</summary>
+    <div class="faq__a"><p>どちらでも構いません。切り捨て・切り上げ・四捨五入のいずれを選ぶかは事業者が任意に決められますが、1つの適格請求書の中では方法を統一し、端数処理は税率ごとに1回だけ行う必要があります。</p></div>
+  </details>
+</div>
+      <p><a class="btn btn--primary" href="/not/">この計算のまま請求書を作る →</a></p>
+    </div>
+    
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <strong>インボイス請求書メーカー</strong>
+      <p class="footer__note">インボイス制度対応の請求書・見積書を、登録なし・無料で。</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="/not/">請求書作成</a>
+      <a href="/not/estimate/">見積書作成</a>
+      <a href="/not/delivery-note/">納品書作成</a>
+      <a href="/not/receipt/">領収書作成</a>
+      <a href="/not/tax-calculator/">消費税・源泉税計算</a>
+      <a href="/not/guide/">インボイス解説</a>
+      <a href="/not/privacy/">プライバシーポリシー</a>
+      <a href="/not/terms/">利用規約</a>
+      <a href="/not/about/">このサイトについて</a>
+    </nav>
+    <p class="footer__legal">
+      本サイトは一般的な情報提供を目的としたものであり、税務相談ではありません。個別の判断は税理士等の専門家、または国税庁の公式情報をご確認ください。<br>
+      &copy; 2026 インボイス請求書メーカー
+    </p>
+  </div>
+</footer>
+<script src="/not/assets/js/invoice-core.js"></script>
+<script src="/not/assets/js/calculator.js"></script>
+</body>
+</html>

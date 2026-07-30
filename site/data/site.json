@@ -1,0 +1,30 @@
+{
+  "name": "インボイス請求書メーカー",
+  "shortName": "請求書メーカー",
+  "tagline": "インボイス制度対応の請求書・見積書を、登録なし・無料で。",
+  "description": "適格請求書（インボイス）の6要件・税率ごとの端数処理・源泉徴収に対応した無料の請求書作成ツール。会員登録不要、データは端末内だけで処理、PDF保存まで完全無料です。",
+  "origin": "https://oreoreno05-arch.github.io",
+  "basePath": "/not",
+  "locale": "ja_JP",
+  "lang": "ja",
+  "author": "インボイス請求書メーカー",
+  "contactEmail": "",
+  "themeColor": "#1d4ed8",
+
+  "monetization": {
+    "adsense": {
+      "enabled": false,
+      "publisherId": "",
+      "slots": {
+        "header": "",
+        "inArticle": "",
+        "belowTool": "",
+        "footer": ""
+      }
+    },
+    "affiliate": {
+      "enabled": false,
+      "items": []
+    }
+  }
+}

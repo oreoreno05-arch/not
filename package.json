@@ -1,0 +1,24 @@
+{
+  "name": "invoice-maker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "インボイス制度対応の請求書・見積書・納品書・領収書を無料で作成できる静的サイト",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs",
+    "e2e": "node scripts/build.mjs && node scripts/e2e.mjs",
+    "verify": "npm run test && npm run check && node scripts/e2e.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs"
+  },
+  "keywords": [
+    "invoice",
+    "インボイス",
+    "請求書",
+    "適格請求書",
+    "見積書"
+  ],
+  "license": "MIT"
+}
